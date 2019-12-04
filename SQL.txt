@@ -1,0 +1,123 @@
+
+use master
+go
+create database iubat_bus
+go
+use iubat_bus
+go
+
+create table bus
+(
+id int identity primary key,
+bus_number varchar(50) not null unique,
+number_plate varchar(500) not null unique ,
+max_capacity int not null
+)
+
+create table location
+(
+id int identity primary key,
+name varchar(50) not null unique,
+city varchar(30) not null
+)
+
+create table time_schedule
+(
+id int identity primary key,
+schedule_time time not null unique,
+)
+
+create table passanger
+(
+id int identity primary key,
+std_id varchar(10) not null unique,
+name varchar(200) not null,
+[password] varchar(20) not null,
+contact varchar(50) not null unique,
+email varchar(50) not null unique,
+gender int,
+joinDate date,
+[address] varchar(500),
+)
+
+
+create table [admin]
+(
+id int identity primary key,
+ad_id varchar(10) not null unique,
+name varchar(200) not null,
+[password] varchar(20) not null,
+contact varchar(50) not null unique,
+email varchar(50) not null unique,
+gender int,
+joinDate date,
+[address] varchar(500),
+)
+
+
+
+create table incedent
+(
+id int identity primary key,
+[description] varchar(500) not null,
+bus_id int not null,
+time_id int not null,
+loc_from int not null,
+loc_to int not null,
+incident_date date not null,
+passanger_id int not null,
+foreign key(passanger_id) references passanger(id),
+foreign key(bus_id) references bus(id),
+foreign key(time_id) references time_schedule(id),
+foreign key(loc_from) references location(id),
+foreign key(loc_to) references location(id)
+)
+
+
+create table schedule
+(
+id int identity primary Key,
+t_id int,
+l_from int ,
+l_to int,
+foreign key(t_id) references time_schedule(id),
+foreign key(l_from) references location(id),
+foreign key(l_to) references location(id)
+)
+
+create table bus_schedule
+(
+id int identity primary Key,
+b_id int,
+s_id int,
+foreign key(b_id) references bus(id),
+foreign key(s_id) references schedule(id)
+)
+
+create table booking
+(
+id int identity primary key,
+passanger_id int not null,
+schedule_id int not null,
+[date] date,
+booking_status int not null, 
+foreign key(passanger_id) references passanger(id),
+foreign key(schedule_id) references bus_schedule(id),
+)
+
+create table cancellation
+(
+id int identity primary key,
+canceled_id int not null,
+foreign key(canceled_id) references booking(id)
+)
+
+
+create table penalty
+(
+id int identity primary key,
+booking_id int not null,
+amount int not null,
+penalty_status int not null,
+foreign key(booking_id) references booking(id)
+)

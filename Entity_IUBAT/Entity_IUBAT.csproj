@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51860F74-AD5D-49CE-A144-4ADF2F42FE96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Entity_IUBAT</RootNamespace>
+    <AssemblyName>Entity_IUBAT</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Sifat\Desktop\SOFT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/Entity_IUBAT/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6296C44746D48CA33615B01F1E8E2BD64868F2B4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Entity_IUBAT_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\Admin.cs" />
+    <Compile Include="DAL\Base.cs" />
+    <Compile Include="DAL\Booking.cs" />
+    <Compile Include="DAL\Bus.cs" />
+    <Compile Include="DAL\BusSchedule.cs" />
+    <Compile Include="DAL\Cancellation.cs" />
+    <Compile Include="DAL\Incident.cs" />
+    <Compile Include="DAL\Location.cs" />
+    <Compile Include="DAL\Passanger.cs" />
+    <Compile Include="DAL\Penalty.cs" />
+    <Compile Include="DAL\Schedule.cs" />
+    <Compile Include="DAL\Time_Schedule.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AdminManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AdminManager.Designer.cs">
+      <DependentUpon>AdminManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AdminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\AdminProfile.Designer.cs">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Booking Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Booking Report.Designer.cs">
+      <DependentUpon>Booking Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Bus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Bus.Designer.cs">
+      <DependentUpon>Bus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusBooking.Designer.cs">
+      <DependentUpon>BusBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusEdit.Designer.cs">
+      <DependentUpon>BusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusNew.Designer.cs">
+      <DependentUpon>BusNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusSchedule.Designer.cs">
+      <DependentUpon>BusSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusScheduleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusScheduleEdit.Designer.cs">
+      <DependentUpon>BusScheduleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusScheduleNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusScheduleNew.Designer.cs">
+      <DependentUpon>BusScheduleNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BusSchedulePassanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\BusSchedulePassanger.Designer.cs">
+      <DependentUpon>BusSchedulePassanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\CancleBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\CancleBooking.Designer.cs">
+      <DependentUpon>CancleBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ChangePasswordAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ChangePasswordAdmin.Designer.cs">
+      <DependentUpon>ChangePasswordAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Incident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Incident.Designer.cs">
+      <DependentUpon>Incident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\IncidentAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\IncidentAdmin.Designer.cs">
+      <DependentUpon>IncidentAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\LocationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\LocationEdit.Designer.cs">
+      <DependentUpon>LocationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\LocationNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\LocationNew.Designer.cs">
+      <DependentUpon>LocationNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Passanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Passanger.Designer.cs">
+      <DependentUpon>Passanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PassenegerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PassenegerProfile.Designer.cs">
+      <DependentUpon>PassenegerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Passsenger_mainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Passsenger_mainmenu.Designer.cs">
+      <DependentUpon>Passsenger_mainmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PenaltyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PenaltyDetails.Designer.cs">
+      <DependentUpon>PenaltyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PenaltyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PenaltyEntry.Designer.cs">
+      <DependentUpon>PenaltyEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PenaltyEntryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PenaltyEntryAdd.Designer.cs">
+      <DependentUpon>PenaltyEntryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PenaltyPassanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PenaltyPassanger.Designer.cs">
+      <DependentUpon>PenaltyPassanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ScheduleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ScheduleEdit.Designer.cs">
+      <DependentUpon>ScheduleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ScheduleNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ScheduleNew.Designer.cs">
+      <DependentUpon>ScheduleNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Time.Designer.cs">
+      <DependentUpon>Time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AdminManager.resx">
+      <DependentUpon>AdminManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AdminProfile.resx">
+      <DependentUpon>AdminProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Booking Report.resx">
+      <DependentUpon>Booking Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Bus.resx">
+      <DependentUpon>Bus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusBooking.resx">
+      <DependentUpon>BusBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusEdit.resx">
+      <DependentUpon>BusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusNew.resx">
+      <DependentUpon>BusNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusSchedule.resx">
+      <DependentUpon>BusSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusScheduleEdit.resx">
+      <DependentUpon>BusScheduleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusScheduleNew.resx">
+      <DependentUpon>BusScheduleNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\BusSchedulePassanger.resx">
+      <DependentUpon>BusSchedulePassanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\CancleBooking.resx">
+      <DependentUpon>CancleBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ChangePasswordAdmin.resx">
+      <DependentUpon>ChangePasswordAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Incident.resx">
+      <DependentUpon>Incident.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\IncidentAdmin.resx">
+      <DependentUpon>IncidentAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Location.resx">
+      <DependentUpon>Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\LocationEdit.resx">
+      <DependentUpon>LocationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\LocationNew.resx">
+      <DependentUpon>LocationNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Passanger.resx">
+      <DependentUpon>Passanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PassenegerProfile.resx">
+      <DependentUpon>PassenegerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Passsenger_mainmenu.resx">
+      <DependentUpon>Passsenger_mainmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PenaltyDetails.resx">
+      <DependentUpon>PenaltyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PenaltyEntry.resx">
+      <DependentUpon>PenaltyEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PenaltyEntryAdd.resx">
+      <DependentUpon>PenaltyEntryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PenaltyPassanger.resx">
+      <DependentUpon>PenaltyPassanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ScheduleEdit.resx">
+      <DependentUpon>ScheduleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ScheduleNew.resx">
+      <DependentUpon>ScheduleNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Time.resx">
+      <DependentUpon>Time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Entity_IUBAT_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\IUBAT.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\IUBAT_BACK.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\IUBAT_BUS.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\IUBAT_LOGO.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\IUBAT_NAME.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
